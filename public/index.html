@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>מערכת ספירת משטחים</title>
+  <style>
+    body { font-family: Arial; background: #e6ffe6; color: #003366; text-align: center; padding: 20px; }
+    h1 { color: #006699; }
+    select, button { padding: 10px; margin: 10px; font-size: 1em; }
+    video, canvas { border: 2px solid #006699; max-width: 100%; height: auto; }
+  </style>
+</head>
+<body>
+  <h1>מערכת ספירת משטחים</h1>
+  <select id="materialSelect"></select><br/>
+  <video id="video" autoplay playsinline width="400" height="300"></video>
+  <canvas id="canvas" width="400" height="300" style="display: none;"></canvas>
+  <h2>נספרו: <span id="count">0</span></h2>
+  <button onclick="startDetection()">התחל</button>
+  <button onclick="stopDetection()">עצור</button>
+  <button onclick="sendManual()">שלח ל-Google Sheets</button>
+  <script src="app.js"></script>
+</body>
+</html>
